@@ -12,7 +12,6 @@
 #include "glad.h"
 #include <GLFW/glfw3.h>
 
-#include "stb_image.h"
 #include "camera.h"
 // 文本
 #include <freetype2/ft2build.h>

@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
     
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Breakout", NULL, NULL);
     if (window == NULL) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -52,8 +52,8 @@ int main(int argc, char *argv[])
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-    glGetError(); // Call it once to catch glewInit() bug, all other errors are now from our application.
-    
+//    glGetError(); // Call it once to catch glewInit() bug, all other errors are now from our application.
+
     glfwSetKeyCallback(window, key_callback);
     
     // OpenGL configuration
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
     
     // Initialize game
     Breakout.Init();
-    
+
     // DeltaTime variables
     GLfloat deltaTime = 0.0f;
     GLfloat lastFrame = 0.0f;
@@ -72,6 +72,7 @@ int main(int argc, char *argv[])
     // Start Game within Menu State
     Breakout.State = GAME_ACTIVE;
     
+
     while (!glfwWindowShouldClose(window))
     {
         // Calculate delta time
@@ -92,9 +93,10 @@ int main(int argc, char *argv[])
         glClear(GL_COLOR_BUFFER_BIT);
         Breakout.Render();
         
+
         glfwSwapBuffers(window);
     }
-    
+
     // Delete all resources as loaded using the resource manager
     ResourceManager::Clear();
     

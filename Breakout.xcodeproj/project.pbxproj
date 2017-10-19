@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF11B9781F98A0EE00A7ED09 /* main.cpp */; };
+		EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */; };
+		EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF6CD9521F988F4900F17879 /* stb_image.cpp */; };
 		EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA639F51F98AB270011028F /* game_setting-up.cpp */; };
 		EFA639FB1F98ABDB0011028F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA639FA1F98ABD30011028F /* OpenGL.framework */; };
 		EFA639FD1F98ABF00011028F /* libglfw.3.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA639FC1F98ABF00011028F /* libglfw.3.2.dylib */; };
@@ -34,6 +36,13 @@
 /* Begin PBXFileReference section */
 		EF11B9751F98A0EE00A7ED09 /* Breakout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Breakout; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF11B9781F98A0EE00A7ED09 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sprite_renderer.cpp; sourceTree = "<group>"; };
+		EF49A3861F98B2F900D2C0DD /* sprite_renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sprite_renderer.hpp; sourceTree = "<group>"; };
+		EF49A3891F98B2F900D2C0DD /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		EF49A38B1F98B2F900D2C0DD /* sprite.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sprite.vert; sourceTree = "<group>"; };
+		EF49A38C1F98B2F900D2C0DD /* sprite.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sprite.frag; sourceTree = "<group>"; };
+		EF6CD9511F988F3F00F17879 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
+		EF6CD9521F988F4900F17879 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 		EFA639F51F98AB270011028F /* game_setting-up.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "game_setting-up.cpp"; sourceTree = "<group>"; };
 		EFA639F61F98AB270011028F /* game_setting-up.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = "game_setting-up.hpp"; sourceTree = "<group>"; };
 		EFA639F81F98AB870011028F /* learnopengl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = learnopengl.h; sourceTree = "<group>"; };
@@ -295,7 +304,6 @@
 		EFA63B021F98AD040011028F /* vec3.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vec3.hpp; sourceTree = "<group>"; };
 		EFA63B031F98AD040011028F /* vec4.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vec4.hpp; sourceTree = "<group>"; };
 		EFA63B041F98AD040011028F /* vector_relational.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = vector_relational.hpp; sourceTree = "<group>"; };
-		EFA63B051F98AD110011028F /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		EFA63B061F98AD160011028F /* khrplatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = khrplatform.h; sourceTree = "<group>"; };
 		EFA63B071F98AD280011028F /* camera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		EFA63B081F98AD300011028F /* mesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mesh.h; sourceTree = "<group>"; };
@@ -343,11 +351,30 @@
 		EF11B9771F98A0EE00A7ED09 /* Breakout */ = {
 			isa = PBXGroup;
 			children = (
+				EF49A38A1F98B2F900D2C0DD /* Shaders */,
+				EF49A3881F98B2F900D2C0DD /* Sources */,
 				EFA63B0B1F98AE050011028F /* Manager */,
 				EFA639F41F98AB090011028F /* Utility */,
 				EF11B9781F98A0EE00A7ED09 /* main.cpp */,
 			);
 			path = Breakout;
+			sourceTree = "<group>";
+		};
+		EF49A3881F98B2F900D2C0DD /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EFBC086E1F988572007ABA6A /* Textures */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EF49A38A1F98B2F900D2C0DD /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				EF49A38B1F98B2F900D2C0DD /* sprite.vert */,
+				EF49A38C1F98B2F900D2C0DD /* sprite.frag */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 		EFA639F41F98AB090011028F /* Utility */ = {
@@ -356,7 +383,7 @@
 				EFA63A051F98AD040011028F /* glm */,
 				EFA63A031F98ACF00011028F /* glad.c */,
 				EFA63A021F98ACF00011028F /* glad.h */,
-				EFA63B051F98AD110011028F /* stb_image.h */,
+				EF6CD9511F988F3F00F17879 /* stb_image.h */,
 				EFA63B061F98AD160011028F /* khrplatform.h */,
 				EFA63B071F98AD280011028F /* camera.h */,
 				EFA63B081F98AD300011028F /* mesh.h */,
@@ -671,8 +698,19 @@
 				EFA639F61F98AB270011028F /* game_setting-up.hpp */,
 				EFA63B181F98B07C0011028F /* resource_manager.cpp */,
 				EFA63B191F98B07C0011028F /* resource_manager.hpp */,
+				EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */,
+				EF49A3861F98B2F900D2C0DD /* sprite_renderer.hpp */,
+				EF6CD9521F988F4900F17879 /* stb_image.cpp */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		EFBC086E1F988572007ABA6A /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				EF49A3891F98B2F900D2C0DD /* awesomeface.png */,
+			);
+			path = Textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -733,11 +771,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */,
+				EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */,
 				EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */,
 				EFA63B141F98AEAB0011028F /* shader.cpp in Sources */,
 				EFA63A041F98ACF00011028F /* glad.c in Sources */,
 				EFA63B171F98AFE40011028F /* texture.cpp in Sources */,
 				EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */,
+				EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +888,6 @@
 					"$(glfw_lib)",
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
-					"$(PROJECT_DIR)/Breakout/Utility",
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -870,7 +909,6 @@
 					"$(glfw_lib)",
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
-					"$(PROJECT_DIR)/Breakout/Utility",
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -11,8 +11,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
-
-//#include <SOIL.h>
+#include "stb_image.h"
 
 // Instantiate static variables
 std::map<std::string, Texture2D>    ResourceManager::Textures;
@@ -104,13 +103,9 @@ Texture2D ResourceManager::loadTextureFromFile(const GLchar *file, GLboolean alp
         texture.Internal_Format = GL_RGBA;
         texture.Image_Format = GL_RGBA;
     }
-    // Load image,
-    // TODO 需要重新换一个新库来加载纹理
-//    int width, height;
-//    unsigned char* image = SOIL_load_image(file, &width, &height, 0, texture.Image_Format == GL_RGBA ? SOIL_LOAD_RGBA : SOIL_LOAD_RGB);
-    // Now generate texture
-//    texture.Generate(width, height, image);
-    // And finally free image data
-//    SOIL_free_image_data(image);
+    // Load image, 这里使用stb_image 替换 SOIL
+    int width, height, nrChannels;
+    unsigned char *image = stbi_load(file, &width, &height, &nrChannels, 0);
+    texture.Generate(width, height, image);
     return texture;
 }
