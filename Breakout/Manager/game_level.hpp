@@ -10,9 +10,8 @@
 #define GAMELEVEL_H
 #include <vector>
 
-#include "learnopengl.h"
 
-#include "game_object.hpp"
+#include "ball_object_collisions.hpp"
 #include "sprite_renderer.hpp"
 #include "resource_manager.hpp"
 

@@ -9,7 +9,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "learnopengl.h"
 #include "game_level.hpp"
 
 #include <vector>
@@ -21,10 +20,23 @@ enum GameState {
     GAME_WIN
 };
 
+enum Direction {
+    COLLISITION_UP,
+    COLLISITION_RIGHT,
+    COLLISITION_DOWN,
+    COLLISITION_LEFT
+};
+
+typedef std::tuple<GLboolean, Direction, glm::vec2> Collision;
+
 // Initial size of the player paddle
 const glm::vec2 PLAYER_SIZE(100, 20);
 // Initial velocity of the player paddle
 const GLfloat PLAYER_VELOCITY(500.0f);
+// Initial velocity of the Ball
+const glm::vec2 INITIAL_BALL_VELOCITY(100.0f, -350.0f);
+// Radius of the ball object
+const GLfloat BALL_RADIUS = 12.5f;
 
 // Game holds all game-related state and functionality.
 // Combines all game-related data into a single class for
@@ -47,6 +59,11 @@ public:
     void ProcessInput(GLfloat dt);
     void Update(GLfloat dt);
     void Render();
+    void DoCollisions();
+    
+    // Reset
+    void ResetLevel();
+    void ResetPlayer();
 };
 
 #endif

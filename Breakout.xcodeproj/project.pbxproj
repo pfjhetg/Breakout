@@ -22,6 +22,7 @@
 		EFA63B141F98AEAB0011028F /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B121F98AEAB0011028F /* shader.cpp */; };
 		EFA63B171F98AFE40011028F /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B151F98AFE40011028F /* texture.cpp */; };
 		EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B181F98B07C0011028F /* resource_manager.cpp */; };
+		EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -331,6 +332,11 @@
 		EFA63B161F98AFE40011028F /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
 		EFA63B181F98B07C0011028F /* resource_manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
 		EFA63B191F98B07C0011028F /* resource_manager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = resource_manager.hpp; sourceTree = "<group>"; };
+		EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = particle_generator.cpp; sourceTree = "<group>"; };
+		EFC5DFD31F99D7A20048A7D8 /* particle_generator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = particle_generator.hpp; sourceTree = "<group>"; };
+		EFC5DFD61F99D9560048A7D8 /* particle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = particle.vert; sourceTree = "<group>"; };
+		EFC5DFD71F99D9660048A7D8 /* particle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = particle.frag; sourceTree = "<group>"; };
+		EFC5DFD81F99D9CE0048A7D8 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -414,6 +420,8 @@
 			children = (
 				EF49A38B1F98B2F900D2C0DD /* sprite.vert */,
 				EF49A38C1F98B2F900D2C0DD /* sprite.frag */,
+				EFC5DFD61F99D9560048A7D8 /* particle.vert */,
+				EFC5DFD71F99D9660048A7D8 /* particle.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -744,6 +752,8 @@
 				EF6CD9521F988F4900F17879 /* stb_image.cpp */,
 				EF453AFC1F999A9800A3E98B /* game_level.cpp */,
 				EF453AFD1F999A9800A3E98B /* game_level.hpp */,
+				EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */,
+				EFC5DFD31F99D7A20048A7D8 /* particle_generator.hpp */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -751,6 +761,7 @@
 		EFBC086E1F988572007ABA6A /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				EFC5DFD81F99D9CE0048A7D8 /* particle.png */,
 				EF453B081F99A39700A3E98B /* background.jpg */,
 				EF49A3891F98B2F900D2C0DD /* awesomeface.png */,
 				EF453B061F99A37300A3E98B /* block_solid.png */,
@@ -818,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */,
+				EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */,
 				EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */,
 				EF453B011F999B8600A3E98B /* game_object.cpp in Sources */,
 				EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */,
