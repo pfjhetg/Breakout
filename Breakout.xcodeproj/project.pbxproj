@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF11B9781F98A0EE00A7ED09 /* main.cpp */; };
+		EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFC1F999A9800A3E98B /* game_level.cpp */; };
+		EF453B011F999B8600A3E98B /* game_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFF1F999B8600A3E98B /* game_object.cpp */; };
 		EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */; };
 		EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF6CD9521F988F4900F17879 /* stb_image.cpp */; };
 		EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA639F51F98AB270011028F /* game_setting-up.cpp */; };
@@ -36,6 +38,18 @@
 /* Begin PBXFileReference section */
 		EF11B9751F98A0EE00A7ED09 /* Breakout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Breakout; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF11B9781F98A0EE00A7ED09 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF453AFC1F999A9800A3E98B /* game_level.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_level.cpp; sourceTree = "<group>"; };
+		EF453AFD1F999A9800A3E98B /* game_level.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_level.hpp; sourceTree = "<group>"; };
+		EF453AFF1F999B8600A3E98B /* game_object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_object.cpp; sourceTree = "<group>"; };
+		EF453B001F999B8600A3E98B /* game_object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_object.hpp; sourceTree = "<group>"; };
+		EF453B051F99A37300A3E98B /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		EF453B061F99A37300A3E98B /* block_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block_solid.png; sourceTree = "<group>"; };
+		EF453B071F99A37300A3E98B /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		EF453B081F99A39700A3E98B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		EF453B0A1F99A3DC00A3E98B /* one.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = one.lvl; sourceTree = "<group>"; };
+		EF453B0B1F99A3F600A3E98B /* two.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = two.lvl; sourceTree = "<group>"; };
+		EF453B0C1F99A40900A3E98B /* three.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = three.lvl; sourceTree = "<group>"; };
+		EF453B0D1F99A41300A3E98B /* four.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = four.lvl; sourceTree = "<group>"; };
 		EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sprite_renderer.cpp; sourceTree = "<group>"; };
 		EF49A3861F98B2F900D2C0DD /* sprite_renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sprite_renderer.hpp; sourceTree = "<group>"; };
 		EF49A3891F98B2F900D2C0DD /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
@@ -360,9 +374,21 @@
 			path = Breakout;
 			sourceTree = "<group>";
 		};
+		EF453B091F99A3D000A3E98B /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				EF453B0A1F99A3DC00A3E98B /* one.lvl */,
+				EF453B0B1F99A3F600A3E98B /* two.lvl */,
+				EF453B0C1F99A40900A3E98B /* three.lvl */,
+				EF453B0D1F99A41300A3E98B /* four.lvl */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
 		EF49A3881F98B2F900D2C0DD /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EF453B091F99A3D000A3E98B /* Levels */,
 				EFBC086E1F988572007ABA6A /* Textures */,
 			);
 			path = Sources;
@@ -701,6 +727,10 @@
 				EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */,
 				EF49A3861F98B2F900D2C0DD /* sprite_renderer.hpp */,
 				EF6CD9521F988F4900F17879 /* stb_image.cpp */,
+				EF453AFC1F999A9800A3E98B /* game_level.cpp */,
+				EF453AFD1F999A9800A3E98B /* game_level.hpp */,
+				EF453AFF1F999B8600A3E98B /* game_object.cpp */,
+				EF453B001F999B8600A3E98B /* game_object.hpp */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -708,7 +738,11 @@
 		EFBC086E1F988572007ABA6A /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				EF453B081F99A39700A3E98B /* background.jpg */,
 				EF49A3891F98B2F900D2C0DD /* awesomeface.png */,
+				EF453B061F99A37300A3E98B /* block_solid.png */,
+				EF453B051F99A37300A3E98B /* block.png */,
+				EF453B071F99A37300A3E98B /* paddle.png */,
 			);
 			path = Textures;
 			sourceTree = "<group>";
@@ -772,8 +806,10 @@
 			files = (
 				EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */,
 				EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */,
+				EF453B011F999B8600A3E98B /* game_object.cpp in Sources */,
 				EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */,
 				EFA63B141F98AEAB0011028F /* shader.cpp in Sources */,
+				EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */,
 				EFA63A041F98ACF00011028F /* glad.c in Sources */,
 				EFA63B171F98AFE40011028F /* texture.cpp in Sources */,
 				EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */,

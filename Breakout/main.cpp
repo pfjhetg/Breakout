@@ -16,11 +16,9 @@
 // GLFW function declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
-// The Width of the screen
-const GLuint SCREEN_WIDTH = 800;
-// The height of the screen
-const GLuint SCREEN_HEIGHT = 600;
 
+
+// 初始化界面
 Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
 
 int main(int argc, char *argv[])
@@ -38,7 +36,7 @@ int main(int argc, char *argv[])
     
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Breakout", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Breakout", NULL, NULL);
     if (window == NULL) {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
@@ -52,7 +50,7 @@ int main(int argc, char *argv[])
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-//    glGetError(); // Call it once to catch glewInit() bug, all other errors are now from our application.
+    glGetError(); // Call it once to catch glewInit() bug, all other errors are now from our application.
 
     glfwSetKeyCallback(window, key_callback);
     
@@ -71,7 +69,6 @@ int main(int argc, char *argv[])
     
     // Start Game within Menu State
     Breakout.State = GAME_ACTIVE;
-    
 
     while (!glfwWindowShouldClose(window))
     {
@@ -92,11 +89,10 @@ int main(int argc, char *argv[])
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         Breakout.Render();
-        
 
         glfwSwapBuffers(window);
     }
-
+    
     // Delete all resources as loaded using the resource manager
     ResourceManager::Clear();
     

@@ -18,11 +18,11 @@
 #include FT_FREETYPE_H
 
 // settings
-const unsigned int SCR_WIDTH = 1280;
-const unsigned int SCR_HEIGHT = 720;
+const unsigned int SCREEN_WIDTH = 800;
+const unsigned int SCREEN_HEIGHT = 600;
 
-static float lastX = SCR_WIDTH / 2.0f;
-static float lastY = SCR_HEIGHT / 2.0f;
+static float lastX = SCREEN_WIDTH / 2.0f;
+static float lastY = SCREEN_HEIGHT / 2.0f;
 static bool firstMouse = true;
 
 // timing
