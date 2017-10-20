@@ -16,8 +16,6 @@
 // GLFW function declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
 
-
-
 // 初始化界面
 Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
 
