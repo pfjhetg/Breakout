@@ -10,6 +10,7 @@
 		EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF11B9781F98A0EE00A7ED09 /* main.cpp */; };
 		EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFC1F999A9800A3E98B /* game_level.cpp */; };
 		EF453B011F999B8600A3E98B /* game_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFF1F999B8600A3E98B /* game_object.cpp */; };
+		EF453B111F99C69A00A3E98B /* ball_object_collisions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */; };
 		EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */; };
 		EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF6CD9521F988F4900F17879 /* stb_image.cpp */; };
 		EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA639F51F98AB270011028F /* game_setting-up.cpp */; };
@@ -50,6 +51,8 @@
 		EF453B0B1F99A3F600A3E98B /* two.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = two.lvl; sourceTree = "<group>"; };
 		EF453B0C1F99A40900A3E98B /* three.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = three.lvl; sourceTree = "<group>"; };
 		EF453B0D1F99A41300A3E98B /* four.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = four.lvl; sourceTree = "<group>"; };
+		EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ball_object_collisions.cpp; sourceTree = "<group>"; };
+		EF453B101F99C69A00A3E98B /* ball_object_collisions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ball_object_collisions.hpp; sourceTree = "<group>"; };
 		EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sprite_renderer.cpp; sourceTree = "<group>"; };
 		EF49A3861F98B2F900D2C0DD /* sprite_renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sprite_renderer.hpp; sourceTree = "<group>"; };
 		EF49A3891F98B2F900D2C0DD /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
@@ -368,6 +371,7 @@
 				EF49A38A1F98B2F900D2C0DD /* Shaders */,
 				EF49A3881F98B2F900D2C0DD /* Sources */,
 				EFA63B0B1F98AE050011028F /* Manager */,
+				EF453B0E1F99C64F00A3E98B /* Entity */,
 				EFA639F41F98AB090011028F /* Utility */,
 				EF11B9781F98A0EE00A7ED09 /* main.cpp */,
 			);
@@ -383,6 +387,17 @@
 				EF453B0D1F99A41300A3E98B /* four.lvl */,
 			);
 			path = Levels;
+			sourceTree = "<group>";
+		};
+		EF453B0E1F99C64F00A3E98B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				EF453AFF1F999B8600A3E98B /* game_object.cpp */,
+				EF453B001F999B8600A3E98B /* game_object.hpp */,
+				EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */,
+				EF453B101F99C69A00A3E98B /* ball_object_collisions.hpp */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		EF49A3881F98B2F900D2C0DD /* Sources */ = {
@@ -729,8 +744,6 @@
 				EF6CD9521F988F4900F17879 /* stb_image.cpp */,
 				EF453AFC1F999A9800A3E98B /* game_level.cpp */,
 				EF453AFD1F999A9800A3E98B /* game_level.hpp */,
-				EF453AFF1F999B8600A3E98B /* game_object.cpp */,
-				EF453B001F999B8600A3E98B /* game_object.hpp */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -810,6 +823,7 @@
 				EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */,
 				EFA63B141F98AEAB0011028F /* shader.cpp in Sources */,
 				EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */,
+				EF453B111F99C69A00A3E98B /* ball_object_collisions.cpp in Sources */,
 				EFA63A041F98ACF00011028F /* glad.c in Sources */,
 				EFA63B171F98AFE40011028F /* texture.cpp in Sources */,
 				EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */,
