@@ -346,8 +346,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */,
 				EFA63A011F98ABFE0011028F /* libassimp.4.0.1.dylib in Frameworks */,
+				EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */,
 				EFA639FF1F98ABF70011028F /* libGLEW.2.1.0.dylib in Frameworks */,
 				EFA639FD1F98ABF00011028F /* libglfw.3.2.dylib in Frameworks */,
 				EFA639FB1F98ABDB0011028F /* OpenGL.framework in Frameworks */,
@@ -950,10 +950,11 @@
 					/usr/local/Cellar/freetype/2.8.1/include/freetype2,
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(glew_lib)",
 					"$(glfw_lib)",
+					"$(glew_lib)",
 					"$(assimp_lib)",
-					/usr/local/Cellar/freetype/2.8.1/lib,
+					"$(libfreetype_lib)",
+					/usr/local/Cellar/assimp/4.0.1/lib,
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -971,10 +972,11 @@
 					/usr/local/Cellar/freetype/2.8.1/include/freetype2,
 				);
 				LIBRARY_SEARCH_PATHS = (
-					"$(glew_lib)",
 					"$(glfw_lib)",
+					"$(glew_lib)",
 					"$(assimp_lib)",
-					/usr/local/Cellar/freetype/2.8.1/lib,
+					"$(libfreetype_lib)",
+					/usr/local/Cellar/assimp/4.0.1/lib,
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
