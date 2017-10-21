@@ -22,6 +22,7 @@
 		EFA63B141F98AEAB0011028F /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B121F98AEAB0011028F /* shader.cpp */; };
 		EFA63B171F98AFE40011028F /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B151F98AFE40011028F /* texture.cpp */; };
 		EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B181F98B07C0011028F /* resource_manager.cpp */; };
+		EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB94B691F9BAEA40092B8DE /* libfreetype.6.dylib */; };
 		EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */; };
 /* End PBXBuildFile section */
 
@@ -332,6 +333,7 @@
 		EFA63B161F98AFE40011028F /* texture.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
 		EFA63B181F98B07C0011028F /* resource_manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
 		EFA63B191F98B07C0011028F /* resource_manager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = resource_manager.hpp; sourceTree = "<group>"; };
+		EFB94B691F9BAEA40092B8DE /* libfreetype.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreetype.6.dylib; path = ../../../../usr/local/Cellar/freetype/2.8.1/lib/libfreetype.6.dylib; sourceTree = "<group>"; };
 		EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = particle_generator.cpp; sourceTree = "<group>"; };
 		EFC5DFD31F99D7A20048A7D8 /* particle_generator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = particle_generator.hpp; sourceTree = "<group>"; };
 		EFC5DFD61F99D9560048A7D8 /* particle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = particle.vert; sourceTree = "<group>"; };
@@ -344,6 +346,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */,
 				EFA63A011F98ABFE0011028F /* libassimp.4.0.1.dylib in Frameworks */,
 				EFA639FF1F98ABF70011028F /* libGLEW.2.1.0.dylib in Frameworks */,
 				EFA639FD1F98ABF00011028F /* libglfw.3.2.dylib in Frameworks */,
@@ -449,6 +452,7 @@
 		EFA639F91F98ABD30011028F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFB94B691F9BAEA40092B8DE /* libfreetype.6.dylib */,
 				EFA63A001F98ABFE0011028F /* libassimp.4.0.1.dylib */,
 				EFA639FE1F98ABF70011028F /* libGLEW.2.1.0.dylib */,
 				EFA639FC1F98ABF00011028F /* libglfw.3.2.dylib */,
@@ -949,7 +953,7 @@
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					"$(assimp_lib)",
-					"$(libfreetype_lib)",
+					/usr/local/Cellar/freetype/2.8.1/lib,
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -970,7 +974,7 @@
 					"$(glew_lib)",
 					"$(glfw_lib)",
 					"$(assimp_lib)",
-					"$(libfreetype_lib)",
+					/usr/local/Cellar/freetype/2.8.1/lib,
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
