@@ -18,6 +18,13 @@
 #include "post_processor.hpp"
 #include "power_up.hpp"
 
+
+#include <OpenAL/OpenAL.h>
+
+//#include <irrKlang.h>
+//using namespace irrklang;
+//#pragma comment(lib, "irrKlang.lib")
+
 #include <vector>
 
 // 代表了游戏的当前状态
