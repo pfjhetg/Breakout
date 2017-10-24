@@ -10,6 +10,13 @@
 #define GAME_H
 
 #include "game_level.hpp"
+#include "resource_manager.hpp"
+#include "sprite_renderer.hpp"
+#include "game_object.hpp"
+#include "game_level.hpp"
+#include "particle_generator.hpp"
+#include "post_processor.hpp"
+#include "power_up.hpp"
 
 #include <vector>
 
@@ -50,6 +57,7 @@ public:
     GLuint                 Width, Height;
     std::vector<GameLevel> Levels;
     GLuint                 Level;
+    std::vector<PowerUp>   PowerUps;
     // Constructor/Destructor
     Game(GLuint width, GLuint height);
     ~Game();
@@ -64,6 +72,10 @@ public:
     // Reset
     void ResetLevel();
     void ResetPlayer();
+    // Powerups
+    void SpawnPowerUps(GameObject &block);
+    void UpdatePowerUps(GLfloat dt);
+    void ActivatePowerUp(PowerUp &powerUp);
 };
 
 #endif

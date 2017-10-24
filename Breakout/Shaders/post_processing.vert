@@ -4,9 +4,9 @@ layout (location = 0) in vec4 vertex; // <vec2 position, vec2 texCoords>
 
 out vec2 TexCoords;
 
-uniform bool  chaos;
-uniform bool  confuse;
-uniform bool  shake;
+uniform bool  chaos;//混乱
+uniform bool  confuse;//颠倒
+uniform bool  shake;//抖动
 uniform float time;
 
 void main()

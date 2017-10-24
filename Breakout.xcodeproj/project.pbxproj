@@ -13,6 +13,7 @@
 		EF453B111F99C69A00A3E98B /* ball_object_collisions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */; };
 		EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */; };
 		EF5A0E3A1F9EEC7000DC2B9F /* post_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF5A0E381F9EEC7000DC2B9F /* post_processor.cpp */; };
+		EF5A0E431F9F0D3F00DC2B9F /* power_up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF5A0E411F9F0D3F00DC2B9F /* power_up.cpp */; };
 		EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF6CD9521F988F4900F17879 /* stb_image.cpp */; };
 		EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA639F51F98AB270011028F /* game_setting-up.cpp */; };
 		EFA639FB1F98ABDB0011028F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA639FA1F98ABD30011028F /* OpenGL.framework */; };
@@ -64,6 +65,14 @@
 		EF5A0E371F9EEB8100DC2B9F /* post_processing.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = post_processing.frag; sourceTree = "<group>"; };
 		EF5A0E381F9EEC7000DC2B9F /* post_processor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = post_processor.cpp; sourceTree = "<group>"; };
 		EF5A0E391F9EEC7000DC2B9F /* post_processor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = post_processor.hpp; sourceTree = "<group>"; };
+		EF5A0E3B1F9F0D1F00DC2B9F /* powerup_confuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_confuse.png; sourceTree = "<group>"; };
+		EF5A0E3C1F9F0D1F00DC2B9F /* powerup_sticky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_sticky.png; sourceTree = "<group>"; };
+		EF5A0E3D1F9F0D1F00DC2B9F /* powerup_chaos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_chaos.png; sourceTree = "<group>"; };
+		EF5A0E3E1F9F0D1F00DC2B9F /* powerup_increase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_increase.png; sourceTree = "<group>"; };
+		EF5A0E3F1F9F0D1F00DC2B9F /* powerup_passthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_passthrough.png; sourceTree = "<group>"; };
+		EF5A0E401F9F0D1F00DC2B9F /* powerup_speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_speed.png; sourceTree = "<group>"; };
+		EF5A0E411F9F0D3F00DC2B9F /* power_up.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = power_up.cpp; sourceTree = "<group>"; };
+		EF5A0E421F9F0D3F00DC2B9F /* power_up.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = power_up.hpp; sourceTree = "<group>"; };
 		EF6CD9511F988F3F00F17879 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
 		EF6CD9521F988F4900F17879 /* stb_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = stb_image.cpp; sourceTree = "<group>"; };
 		EFA639F51F98AB270011028F /* game_setting-up.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "game_setting-up.cpp"; sourceTree = "<group>"; };
@@ -407,6 +416,8 @@
 				EF453B001F999B8600A3E98B /* game_object.hpp */,
 				EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */,
 				EF453B101F99C69A00A3E98B /* ball_object_collisions.hpp */,
+				EF5A0E411F9F0D3F00DC2B9F /* power_up.cpp */,
+				EF5A0E421F9F0D3F00DC2B9F /* power_up.hpp */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -770,6 +781,12 @@
 		EFBC086E1F988572007ABA6A /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				EF5A0E3D1F9F0D1F00DC2B9F /* powerup_chaos.png */,
+				EF5A0E3B1F9F0D1F00DC2B9F /* powerup_confuse.png */,
+				EF5A0E3E1F9F0D1F00DC2B9F /* powerup_increase.png */,
+				EF5A0E3F1F9F0D1F00DC2B9F /* powerup_passthrough.png */,
+				EF5A0E401F9F0D1F00DC2B9F /* powerup_speed.png */,
+				EF5A0E3C1F9F0D1F00DC2B9F /* powerup_sticky.png */,
 				EFC5DFD81F99D9CE0048A7D8 /* particle.png */,
 				EF453B081F99A39700A3E98B /* background.jpg */,
 				EF49A3891F98B2F900D2C0DD /* awesomeface.png */,
@@ -841,6 +858,7 @@
 				EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */,
 				EF6CD9531F988F4900F17879 /* stb_image.cpp in Sources */,
 				EF453B011F999B8600A3E98B /* game_object.cpp in Sources */,
+				EF5A0E431F9F0D3F00DC2B9F /* power_up.cpp in Sources */,
 				EF5A0E3A1F9EEC7000DC2B9F /* post_processor.cpp in Sources */,
 				EFA639F71F98AB270011028F /* game_setting-up.cpp in Sources */,
 				EFA63B141F98AEAB0011028F /* shader.cpp in Sources */,
