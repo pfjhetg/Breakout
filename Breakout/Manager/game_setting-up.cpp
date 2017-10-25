@@ -13,7 +13,7 @@ GameObject        *Player;
 BallObject        *Ball;
 ParticleGenerator *Particles;
 PostProcessor     *Effects;
-//ISoundEngine      *SoundEngine = createIrrKlangDevice();
+irrklang::ISoundEngine      *SoundEngine = irrklang::createIrrKlangDevice();
 GLfloat            ShakeTime = 0.0f;
 
 Game::Game(GLuint width, GLuint height)
@@ -29,7 +29,7 @@ Game::~Game()
     delete Ball;
     delete Particles;
     delete Effects;
-//    SoundEngine->drop();
+    SoundEngine->drop();
 }
 
 void Game::Init()
@@ -84,7 +84,10 @@ void Game::Init()
                           ResourceManager::GetTexture("face"));
     
     // Audio
-//    SoundEngine->play2D("Audio/breakout.mp3", GL_TRUE);
+    SoundEngine->play2D("Sources/Audio/breakout.mp3", GL_TRUE);
+//    SoundEngine->play3D("Sources/Audio/breakout.mp3", vec3df(0, 0, 0));
+//    SoundEngine->play2D("Sources/Audio/breakout.mp3",
+//                        true, false, true, ESM_AUTO_DETECT, true);
 }
 
 void Game::Update(GLfloat dt)
@@ -211,14 +214,14 @@ void Game::DoCollisions()
                 {
                     box.Destroyed = GL_TRUE;
                     this->SpawnPowerUps(box);
-//                    SoundEngine->play2D("Audio/bleep.mp3", GL_FALSE);
+                    SoundEngine->play2D("Sources/Audio/bleep.mp3", GL_FALSE);
                 }
                 else
                 {
                     // if block is solid, enable shake effect
                     ShakeTime = 0.05f;
                     Effects->Shake = GL_TRUE;
-//                    SoundEngine->play2D("Audio/solid.wav", GL_FALSE);
+                    SoundEngine->play2D("Sources/Audio/solid.wav", GL_FALSE);
                 }
                 //Collision resolution
                 Direction dir = std::get<1>(collision);
@@ -261,7 +264,7 @@ void Game::DoCollisions()
                 ActivatePowerUp(powerUp);
                 powerUp.Destroyed = GL_TRUE;
                 powerUp.Activated = GL_TRUE;
-//                SoundEngine->play2D("Audio/powerup.wav", GL_FALSE);
+                SoundEngine->play2D("Sources/Audio/powerup.wav", GL_FALSE);
             }
         }
     }
@@ -286,7 +289,7 @@ void Game::DoCollisions()
         // If Sticky powerup is activated, also stick ball to paddle once new velocity vectors were calculated
         Ball->Stuck = Ball->Sticky;
         
-//        SoundEngine->play2D("Audio/bleep.wav", GL_FALSE);
+        SoundEngine->play2D("Sources/Audio/bleep.wav", GL_FALSE);
     }
 }
 

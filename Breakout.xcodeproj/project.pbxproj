@@ -26,6 +26,9 @@
 		EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */; };
 		EFD4DC5F1FA01C3C00E41271 /* power_up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */; };
 		EFD4DC621FA01C7700E41271 /* post_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD4DC611FA01C7700E41271 /* post_processor.cpp */; };
+		EFD4DCCD1FA033FA00E41271 /* ikpMP3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */; };
+		EFD4DCCE1FA033FA00E41271 /* libirrklang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */; };
+		EFD4DCCF1FA033FA00E41271 /* ikpFLAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -350,6 +353,31 @@
 		EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = power_up.cpp; sourceTree = "<group>"; };
 		EFD4DC601FA01C7700E41271 /* post_processor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = post_processor.hpp; sourceTree = "<group>"; };
 		EFD4DC611FA01C7700E41271 /* post_processor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = post_processor.cpp; sourceTree = "<group>"; };
+		EFD4DCC61FA032FB00E41271 /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = ../../../../usr/local/Cellar/irrKlang/lib/libirrklang.dylib; sourceTree = "<group>"; };
+		EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpMP3.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/ikpMP3.dylib"; sourceTree = "<group>"; };
+		EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/libirrklang.dylib"; sourceTree = "<group>"; };
+		EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpFLAC.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/ikpFLAC.dylib"; sourceTree = "<group>"; };
+		EFD4DCD11FA0361F00E41271 /* ik_ESoundEngineOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ESoundEngineOptions.h; sourceTree = "<group>"; };
+		EFD4DCD21FA0361F00E41271 /* ik_ESoundOutputDrivers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ESoundOutputDrivers.h; sourceTree = "<group>"; };
+		EFD4DCD31FA0361F00E41271 /* ik_EStreamModes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_EStreamModes.h; sourceTree = "<group>"; };
+		EFD4DCD41FA0361F00E41271 /* ik_IAudioRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioRecorder.h; sourceTree = "<group>"; };
+		EFD4DCD51FA0361F00E41271 /* ik_IAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioStream.h; sourceTree = "<group>"; };
+		EFD4DCD61FA0361F00E41271 /* ik_IAudioStreamLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioStreamLoader.h; sourceTree = "<group>"; };
+		EFD4DCD71FA0361F00E41271 /* ik_IFileFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IFileFactory.h; sourceTree = "<group>"; };
+		EFD4DCD81FA0361F00E41271 /* ik_IFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IFileReader.h; sourceTree = "<group>"; };
+		EFD4DCD91FA0361F00E41271 /* ik_IRefCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IRefCounted.h; sourceTree = "<group>"; };
+		EFD4DCDA1FA0361F00E41271 /* ik_irrKlangTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_irrKlangTypes.h; sourceTree = "<group>"; };
+		EFD4DCDB1FA0361F00E41271 /* ik_ISound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISound.h; sourceTree = "<group>"; };
+		EFD4DCDC1FA0361F00E41271 /* ik_ISoundDeviceList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundDeviceList.h; sourceTree = "<group>"; };
+		EFD4DCDD1FA0361F00E41271 /* ik_ISoundEffectControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundEffectControl.h; sourceTree = "<group>"; };
+		EFD4DCDE1FA0361F00E41271 /* ik_ISoundEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundEngine.h; sourceTree = "<group>"; };
+		EFD4DCDF1FA0361F00E41271 /* ik_ISoundMixedOutputReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundMixedOutputReceiver.h; sourceTree = "<group>"; };
+		EFD4DCE01FA0361F00E41271 /* ik_ISoundSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundSource.h; sourceTree = "<group>"; };
+		EFD4DCE11FA0361F00E41271 /* ik_ISoundStopEventReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundStopEventReceiver.h; sourceTree = "<group>"; };
+		EFD4DCE21FA0361F00E41271 /* ik_IVirtualRefCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IVirtualRefCounted.h; sourceTree = "<group>"; };
+		EFD4DCE31FA0361F00E41271 /* ik_SAudioStreamFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_SAudioStreamFormat.h; sourceTree = "<group>"; };
+		EFD4DCE41FA0361F00E41271 /* ik_vec3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_vec3d.h; sourceTree = "<group>"; };
+		EFD4DCE51FA0361F00E41271 /* irrKlang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = irrKlang.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +385,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFD4DCCD1FA033FA00E41271 /* ikpMP3.dylib in Frameworks */,
+				EFD4DCCE1FA033FA00E41271 /* libirrklang.dylib in Frameworks */,
+				EFD4DCCF1FA033FA00E41271 /* ikpFLAC.dylib in Frameworks */,
 				EFA63A011F98ABFE0011028F /* libassimp.4.0.1.dylib in Frameworks */,
 				EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */,
 				EFA639FF1F98ABF70011028F /* libGLEW.2.1.0.dylib in Frameworks */,
@@ -466,6 +497,10 @@
 		EFA639F91F98ABD30011028F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFD4DCC61FA032FB00E41271 /* libirrklang.dylib */,
+				EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */,
+				EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */,
+				EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */,
 				EFB94B691F9BAEA40092B8DE /* libfreetype.6.dylib */,
 				EFA63A001F98ABFE0011028F /* libassimp.4.0.1.dylib */,
 				EFA639FE1F98ABF70011028F /* libGLEW.2.1.0.dylib */,
@@ -761,8 +796,7 @@
 		EFA63B0B1F98AE050011028F /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				EFD4DC611FA01C7700E41271 /* post_processor.cpp */,
-				EFD4DC601FA01C7700E41271 /* post_processor.hpp */,
+				EFD4DCD01FA0361F00E41271 /* include */,
 				EFA639F51F98AB270011028F /* game_setting-up.cpp */,
 				EFA639F61F98AB270011028F /* game_setting-up.hpp */,
 				EFA63B181F98B07C0011028F /* resource_manager.cpp */,
@@ -774,6 +808,8 @@
 				EF453AFD1F999A9800A3E98B /* game_level.hpp */,
 				EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */,
 				EFC5DFD31F99D7A20048A7D8 /* particle_generator.hpp */,
+				EFD4DC611FA01C7700E41271 /* post_processor.cpp */,
+				EFD4DC601FA01C7700E41271 /* post_processor.hpp */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -801,6 +837,34 @@
 				EFD4DC5C1FA01BF900E41271 /* solid.wav */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		EFD4DCD01FA0361F00E41271 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				EFD4DCD11FA0361F00E41271 /* ik_ESoundEngineOptions.h */,
+				EFD4DCD21FA0361F00E41271 /* ik_ESoundOutputDrivers.h */,
+				EFD4DCD31FA0361F00E41271 /* ik_EStreamModes.h */,
+				EFD4DCD41FA0361F00E41271 /* ik_IAudioRecorder.h */,
+				EFD4DCD51FA0361F00E41271 /* ik_IAudioStream.h */,
+				EFD4DCD61FA0361F00E41271 /* ik_IAudioStreamLoader.h */,
+				EFD4DCD71FA0361F00E41271 /* ik_IFileFactory.h */,
+				EFD4DCD81FA0361F00E41271 /* ik_IFileReader.h */,
+				EFD4DCD91FA0361F00E41271 /* ik_IRefCounted.h */,
+				EFD4DCDA1FA0361F00E41271 /* ik_irrKlangTypes.h */,
+				EFD4DCDB1FA0361F00E41271 /* ik_ISound.h */,
+				EFD4DCDC1FA0361F00E41271 /* ik_ISoundDeviceList.h */,
+				EFD4DCDD1FA0361F00E41271 /* ik_ISoundEffectControl.h */,
+				EFD4DCDE1FA0361F00E41271 /* ik_ISoundEngine.h */,
+				EFD4DCDF1FA0361F00E41271 /* ik_ISoundMixedOutputReceiver.h */,
+				EFD4DCE01FA0361F00E41271 /* ik_ISoundSource.h */,
+				EFD4DCE11FA0361F00E41271 /* ik_ISoundStopEventReceiver.h */,
+				EFD4DCE21FA0361F00E41271 /* ik_IVirtualRefCounted.h */,
+				EFD4DCE31FA0361F00E41271 /* ik_SAudioStreamFormat.h */,
+				EFD4DCE41FA0361F00E41271 /* ik_vec3d.h */,
+				EFD4DCE51FA0361F00E41271 /* irrKlang.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -972,6 +1036,7 @@
 		EF11B97D1F98A0EE00A7ED09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
 					"$(glfw_header)",
@@ -985,15 +1050,20 @@
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
 					/usr/local/Cellar/assimp/4.0.1/lib,
+					"$(PROJECT_DIR)/Breakout/Manager",
+					/usr/local/Cellar/irrKlang/lib,
+					"/usr/local/Cellar/irrKlang/bin/macosx-gcc",
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		EF11B97E1F98A0EE00A7ED09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
 					"$(glfw_header)",
@@ -1007,9 +1077,13 @@
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
 					/usr/local/Cellar/assimp/4.0.1/lib,
+					"$(PROJECT_DIR)/Breakout/Manager",
+					/usr/local/Cellar/irrKlang/lib,
+					"/usr/local/Cellar/irrKlang/bin/macosx-gcc",
 				);
 				OTHER_LDFLAGS = "-lfreetype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
