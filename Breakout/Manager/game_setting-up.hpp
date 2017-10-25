@@ -20,6 +20,7 @@
 #include <tuple>
 #include "text_renderer.hpp"
 
+#include <iostream>
 #include <sstream>
 
 #include "irrKlang.h"

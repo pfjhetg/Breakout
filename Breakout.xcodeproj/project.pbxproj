@@ -550,14 +550,14 @@
 		EF49A38A1F98B2F900D2C0DD /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
-				EF26EED61FA07F050093C5CB /* text.frag */,
 				EF26EED71FA07F050093C5CB /* text.vert */,
+				EF26EED61FA07F050093C5CB /* text.frag */,
 				EF49A38B1F98B2F900D2C0DD /* sprite.vert */,
 				EF49A38C1F98B2F900D2C0DD /* sprite.frag */,
 				EFC5DFD61F99D9560048A7D8 /* particle.vert */,
 				EFC5DFD71F99D9660048A7D8 /* particle.frag */,
-				EF26EED81FA07F050093C5CB /* post_processing.frag */,
 				EF26EED91FA07F050093C5CB /* post_processing.vert */,
+				EF26EED81FA07F050093C5CB /* post_processing.frag */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";

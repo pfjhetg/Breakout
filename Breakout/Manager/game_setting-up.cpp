@@ -145,7 +145,7 @@ void Game::ProcessInput(GLfloat dt)
         if (this->Keys[GLFW_KEY_W] && !this->KeysProcessed[GLFW_KEY_W])
         {
             this->Level = (this->Level + 1) % 4;
-            this->KeysProcessed[GLFW_KEY_W] = GL_TRUE;
+//            this->KeysProcessed[GLFW_KEY_W] = GL_TRUE;
         }
         if (this->Keys[GLFW_KEY_S] && !this->KeysProcessed[GLFW_KEY_S])
         {
@@ -153,7 +153,7 @@ void Game::ProcessInput(GLfloat dt)
                 --this->Level;
             else
                 this->Level = 3;
-            this->KeysProcessed[GLFW_KEY_S] = GL_TRUE;
+//            this->KeysProcessed[GLFW_KEY_S] = GL_TRUE;
         }
     }
     if (this->State == GAME_WIN)
@@ -194,7 +194,6 @@ void Game::ProcessInput(GLfloat dt)
 
 void Game::Render()
 {
-    
     if (this->State == GAME_ACTIVE || this->State == GAME_MENU || this->State == GAME_WIN)
     {
         // Begin rendering to postprocessing quad
@@ -219,7 +218,9 @@ void Game::Render()
         // Render postprocessing quad
         Effects->Render(glfwGetTime());
         // Render text (don't include in postprocessing)
-        std::stringstream ss; ss << this->Lives;
+        std::stringstream ss;
+        ss << this->Lives;
+//        std::cout << this->Lives << std::endl;
         Text->RenderText("Lives:" + ss.str(), 5.0f, 5.0f, 1.0f);
     }
     if (this->State == GAME_MENU)
