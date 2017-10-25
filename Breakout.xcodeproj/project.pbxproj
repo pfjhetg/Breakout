@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF11B9781F98A0EE00A7ED09 /* main.cpp */; };
 		EF26EEAC1FA066E70093C5CB /* ikpMP3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */; };
+		EF26EED31FA073C80093C5CB /* text_renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF26EED11FA073C80093C5CB /* text_renderer.cpp */; };
 		EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFC1F999A9800A3E98B /* game_level.cpp */; };
 		EF453B011F999B8600A3E98B /* game_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFF1F999B8600A3E98B /* game_object.cpp */; };
 		EF453B111F99C69A00A3E98B /* ball_object_collisions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */; };
@@ -89,6 +90,13 @@
 		EF26EECE1FA06B0E0093C5CB /* ik_SAudioStreamFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_SAudioStreamFormat.h; sourceTree = "<group>"; };
 		EF26EECF1FA06B0E0093C5CB /* ik_vec3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_vec3d.h; sourceTree = "<group>"; };
 		EF26EED01FA06B0E0093C5CB /* irrKlang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = irrKlang.h; sourceTree = "<group>"; };
+		EF26EED11FA073C80093C5CB /* text_renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = text_renderer.cpp; sourceTree = "<group>"; };
+		EF26EED21FA073C80093C5CB /* text_renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = text_renderer.hpp; sourceTree = "<group>"; };
+		EF26EED51FA07CBE0093C5CB /* font_1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = font_1.ttf; sourceTree = "<group>"; };
+		EF26EED61FA07F050093C5CB /* text.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = text.frag; sourceTree = "<group>"; };
+		EF26EED71FA07F050093C5CB /* text.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = text.vert; sourceTree = "<group>"; };
+		EF26EED81FA07F050093C5CB /* post_processing.frag */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = post_processing.frag; sourceTree = "<group>"; };
+		EF26EED91FA07F050093C5CB /* post_processing.vert */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = post_processing.vert; sourceTree = "<group>"; };
 		EF453AFC1F999A9800A3E98B /* game_level.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_level.cpp; sourceTree = "<group>"; };
 		EF453AFD1F999A9800A3E98B /* game_level.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_level.hpp; sourceTree = "<group>"; };
 		EF453AFF1F999B8600A3E98B /* game_object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_object.cpp; sourceTree = "<group>"; };
@@ -439,6 +447,7 @@
 		EF26EE731FA063670093C5CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF26EED41FA07CBE0093C5CB /* Font */,
 				EF26EEBB1FA06B0E0093C5CB /* include */,
 				EF26EEB41FA068F20093C5CB /* Audio */,
 				EF26EE921FA063670093C5CB /* Levels */,
@@ -517,6 +526,14 @@
 			path = include;
 			sourceTree = "<group>";
 		};
+		EF26EED41FA07CBE0093C5CB /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EF26EED51FA07CBE0093C5CB /* font_1.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		EF453B0E1F99C64F00A3E98B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,10 +550,14 @@
 		EF49A38A1F98B2F900D2C0DD /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				EF26EED61FA07F050093C5CB /* text.frag */,
+				EF26EED71FA07F050093C5CB /* text.vert */,
 				EF49A38B1F98B2F900D2C0DD /* sprite.vert */,
 				EF49A38C1F98B2F900D2C0DD /* sprite.frag */,
 				EFC5DFD61F99D9560048A7D8 /* particle.vert */,
 				EFC5DFD71F99D9660048A7D8 /* particle.frag */,
+				EF26EED81FA07F050093C5CB /* post_processing.frag */,
+				EF26EED91FA07F050093C5CB /* post_processing.vert */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -877,6 +898,8 @@
 				EFC5DFD31F99D7A20048A7D8 /* particle_generator.hpp */,
 				EFD4DC611FA01C7700E41271 /* post_processor.cpp */,
 				EFD4DC601FA01C7700E41271 /* post_processor.hpp */,
+				EF26EED11FA073C80093C5CB /* text_renderer.cpp */,
+				EF26EED21FA073C80093C5CB /* text_renderer.hpp */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -952,6 +975,7 @@
 				EFA63B171F98AFE40011028F /* texture.cpp in Sources */,
 				EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */,
 				EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */,
+				EF26EED31FA073C80093C5CB /* text_renderer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

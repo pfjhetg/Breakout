@@ -17,6 +17,10 @@
 #include "particle_generator.hpp"
 #include "post_processor.hpp"
 #include "power_up.hpp"
+#include <tuple>
+#include "text_renderer.hpp"
+
+#include <sstream>
 
 #include "irrKlang.h"
 using namespace irrklang;
@@ -57,10 +61,12 @@ public:
     // Game state
     GameState              State;
     GLboolean              Keys[1024];
+    GLboolean              KeysProcessed[1024];
     GLuint                 Width, Height;
     std::vector<GameLevel> Levels;
     GLuint                 Level;
     std::vector<PowerUp>   PowerUps;
+    GLuint                 Lives;
     // Constructor/Destructor
     Game(GLuint width, GLuint height);
     ~Game();
