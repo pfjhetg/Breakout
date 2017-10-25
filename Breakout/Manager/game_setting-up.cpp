@@ -44,18 +44,18 @@ void Game::Init()
     ResourceManager::GetShader("particle").Use().SetInteger("sprite", 0);
     ResourceManager::GetShader("particle").SetMatrix4("projection", projection);
     // Load textures
-    ResourceManager::LoadTexture("Sources/Textures/background.jpg", GL_FALSE, "background");
-    ResourceManager::LoadTexture("Sources/Textures/awesomeface.png", GL_TRUE, "face");
-    ResourceManager::LoadTexture("Sources/Textures/block.png", GL_FALSE, "block");
-    ResourceManager::LoadTexture("Sources/Textures/block_solid.png", GL_FALSE, "block_solid");
-    ResourceManager::LoadTexture("Sources/Textures/paddle.png", true, "paddle");
-    ResourceManager::LoadTexture("Sources/Textures/particle.png", GL_TRUE, "particle");
-    ResourceManager::LoadTexture("Sources/Textures/powerup_speed.png", GL_TRUE, "powerup_speed");
-    ResourceManager::LoadTexture("Sources/Textures/powerup_sticky.png", GL_TRUE, "powerup_sticky");
-    ResourceManager::LoadTexture("Sources/Textures/powerup_passthrough.png", GL_TRUE, "powerup_passthrough");
-    ResourceManager::LoadTexture("Sources/Textures/powerup_increase.png", GL_TRUE, "powerup_increase");
-    ResourceManager::LoadTexture("Sources/Textures/powerup_confuse.png", GL_TRUE, "powerup_confuse");
-    ResourceManager::LoadTexture("Sources/Textures/powerup_chaos.png", GL_TRUE, "powerup_chaos");
+    ResourceManager::LoadTexture("Resources/Textures/background.jpg", GL_FALSE, "background");
+    ResourceManager::LoadTexture("Resources/Textures/awesomeface.png", GL_TRUE, "face");
+    ResourceManager::LoadTexture("Resources/Textures/block.png", GL_FALSE, "block");
+    ResourceManager::LoadTexture("Resources/Textures/block_solid.png", GL_FALSE, "block_solid");
+    ResourceManager::LoadTexture("Resources/Textures/paddle.png", true, "paddle");
+    ResourceManager::LoadTexture("Resources/Textures/particle.png", GL_TRUE, "particle");
+    ResourceManager::LoadTexture("Resources/Textures/powerup_speed.png", GL_TRUE, "powerup_speed");
+    ResourceManager::LoadTexture("Resources/Textures/powerup_sticky.png", GL_TRUE, "powerup_sticky");
+    ResourceManager::LoadTexture("Resources/Textures/powerup_passthrough.png", GL_TRUE, "powerup_passthrough");
+    ResourceManager::LoadTexture("Resources/Textures/powerup_increase.png", GL_TRUE, "powerup_increase");
+    ResourceManager::LoadTexture("Resources/Textures/powerup_confuse.png", GL_TRUE, "powerup_confuse");
+    ResourceManager::LoadTexture("Resources/Textures/powerup_chaos.png", GL_TRUE, "powerup_chaos");
 
     // Set render-specific controls
     Shader sprite = ResourceManager::GetShader("sprite");
@@ -66,10 +66,10 @@ void Game::Init()
     Effects = new PostProcessor(effects, this->Width, this->Height);
 
     // Load levels
-    GameLevel one; one.Load("Sources/Levels/one.lvl", this->Width, this->Height * 0.5);
-    GameLevel two; two.Load("Sources/Levels/two.lvl", this->Width, this->Height * 0.5);
-    GameLevel three; three.Load("Sources/Levels/three.lvl", this->Width, this->Height * 0.5);
-    GameLevel four; four.Load("Sources/Levels/four.lvl", this->Width, this->Height * 0.5);
+    GameLevel one; one.Load("Resources/Levels/one.lvl", this->Width, this->Height * 0.5);
+    GameLevel two; two.Load("Resources/Levels/two.lvl", this->Width, this->Height * 0.5);
+    GameLevel three; three.Load("Resources/Levels/three.lvl", this->Width, this->Height * 0.5);
+    GameLevel four; four.Load("Resources/Levels/four.lvl", this->Width, this->Height * 0.5);
     this->Levels.push_back(one);
     this->Levels.push_back(two);
     this->Levels.push_back(three);
@@ -84,10 +84,8 @@ void Game::Init()
                           ResourceManager::GetTexture("face"));
     
     // Audio
-    SoundEngine->play2D("Sources/Audio/breakout.mp3", GL_TRUE);
-//    SoundEngine->play3D("Sources/Audio/breakout.mp3", vec3df(0, 0, 0));
-//    SoundEngine->play2D("Sources/Audio/breakout.mp3",
-//                        true, false, true, ESM_AUTO_DETECT, true);
+//    bool bo = SoundEngine->loadPlugins("Resources/IrrKlangPlugins/ikpMP3.dylib");
+    SoundEngine->play2D("Resources/Audio/breakout.wav", GL_TRUE);
 }
 
 void Game::Update(GLfloat dt)
@@ -173,13 +171,13 @@ void Game::Render()
 
 void Game::ResetLevel()
 {
-    if (this->Level == 0)this->Levels[0].Load("Sources/Levels/one.lvl", this->Width, this->Height * 0.5f);
+    if (this->Level == 0)this->Levels[0].Load("Resources/Levels/one.lvl", this->Width, this->Height * 0.5f);
     else if (this->Level == 1)
-        this->Levels[1].Load("Sources/Levels/two.lvl", this->Width, this->Height * 0.5f);
+        this->Levels[1].Load("Resources/Levels/two.lvl", this->Width, this->Height * 0.5f);
     else if (this->Level == 2)
-        this->Levels[2].Load("Sources/Levels/three.lvl", this->Width, this->Height * 0.5f);
+        this->Levels[2].Load("Resources/Levels/three.lvl", this->Width, this->Height * 0.5f);
     else if (this->Level == 3)
-        this->Levels[3].Load("Sources/Levels/four.lvl", this->Width, this->Height * 0.5f);
+        this->Levels[3].Load("Resources/Levels/four.lvl", this->Width, this->Height * 0.5f);
 }
 
 void Game::ResetPlayer()
@@ -214,14 +212,14 @@ void Game::DoCollisions()
                 {
                     box.Destroyed = GL_TRUE;
                     this->SpawnPowerUps(box);
-                    SoundEngine->play2D("Sources/Audio/bleep.mp3", GL_FALSE);
+                    SoundEngine->play2D("Resources/Audio/bleep2.wav", GL_FALSE);
                 }
                 else
                 {
                     // if block is solid, enable shake effect
                     ShakeTime = 0.05f;
                     Effects->Shake = GL_TRUE;
-                    SoundEngine->play2D("Sources/Audio/solid.wav", GL_FALSE);
+                    SoundEngine->play2D("Resources/Audio/solid.wav", GL_FALSE);
                 }
                 //Collision resolution
                 Direction dir = std::get<1>(collision);
@@ -264,7 +262,7 @@ void Game::DoCollisions()
                 ActivatePowerUp(powerUp);
                 powerUp.Destroyed = GL_TRUE;
                 powerUp.Activated = GL_TRUE;
-                SoundEngine->play2D("Sources/Audio/powerup.wav", GL_FALSE);
+                SoundEngine->play2D("Resources/Audio/powerup.wav", GL_FALSE);
             }
         }
     }
@@ -289,7 +287,7 @@ void Game::DoCollisions()
         // If Sticky powerup is activated, also stick ball to paddle once new velocity vectors were calculated
         Ball->Stuck = Ball->Sticky;
         
-        SoundEngine->play2D("Sources/Audio/bleep.wav", GL_FALSE);
+        SoundEngine->play2D("Resources/Audio/bleep.wav", GL_FALSE);
     }
 }
 

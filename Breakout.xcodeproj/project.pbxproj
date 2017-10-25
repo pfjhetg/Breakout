@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EF11B9791F98A0EE00A7ED09 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF11B9781F98A0EE00A7ED09 /* main.cpp */; };
+		EF26EEAC1FA066E70093C5CB /* ikpMP3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */; };
 		EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFC1F999A9800A3E98B /* game_level.cpp */; };
 		EF453B011F999B8600A3E98B /* game_object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453AFF1F999B8600A3E98B /* game_object.cpp */; };
 		EF453B111F99C69A00A3E98B /* ball_object_collisions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */; };
@@ -26,7 +27,6 @@
 		EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */; };
 		EFD4DC5F1FA01C3C00E41271 /* power_up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */; };
 		EFD4DC621FA01C7700E41271 /* post_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD4DC611FA01C7700E41271 /* post_processor.cpp */; };
-		EFD4DCCD1FA033FA00E41271 /* ikpMP3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */; };
 		EFD4DCCE1FA033FA00E41271 /* libirrklang.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */; };
 		EFD4DCCF1FA033FA00E41271 /* ikpFLAC.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */; };
 /* End PBXBuildFile section */
@@ -46,23 +46,57 @@
 /* Begin PBXFileReference section */
 		EF11B9751F98A0EE00A7ED09 /* Breakout */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Breakout; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF11B9781F98A0EE00A7ED09 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF26EE931FA063670093C5CB /* four.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = four.lvl; sourceTree = "<group>"; };
+		EF26EE941FA063670093C5CB /* one.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = one.lvl; sourceTree = "<group>"; };
+		EF26EE951FA063670093C5CB /* three.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = three.lvl; sourceTree = "<group>"; };
+		EF26EE961FA063670093C5CB /* two.lvl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = two.lvl; sourceTree = "<group>"; };
+		EF26EE981FA063670093C5CB /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
+		EF26EE991FA063670093C5CB /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		EF26EE9A1FA063670093C5CB /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
+		EF26EE9B1FA063670093C5CB /* block_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block_solid.png; sourceTree = "<group>"; };
+		EF26EE9C1FA063670093C5CB /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
+		EF26EE9D1FA063670093C5CB /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
+		EF26EE9E1FA063670093C5CB /* powerup_chaos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_chaos.png; sourceTree = "<group>"; };
+		EF26EE9F1FA063670093C5CB /* powerup_confuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_confuse.png; sourceTree = "<group>"; };
+		EF26EEA01FA063670093C5CB /* powerup_increase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_increase.png; sourceTree = "<group>"; };
+		EF26EEA11FA063670093C5CB /* powerup_passthrough.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_passthrough.png; sourceTree = "<group>"; };
+		EF26EEA21FA063670093C5CB /* powerup_speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_speed.png; sourceTree = "<group>"; };
+		EF26EEA31FA063670093C5CB /* powerup_sticky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powerup_sticky.png; sourceTree = "<group>"; };
+		EF26EEAA1FA066CA0093C5CB /* libikpMP3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libikpMP3.dylib; path = ../../../../usr/local/lib/libikpMP3.dylib; sourceTree = "<group>"; };
+		EF26EEB51FA068F20093C5CB /* bleep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bleep.wav; sourceTree = "<group>"; };
+		EF26EEB61FA068F20093C5CB /* bleep2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bleep2.wav; sourceTree = "<group>"; };
+		EF26EEB71FA068F20093C5CB /* breakout.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = breakout.wav; sourceTree = "<group>"; };
+		EF26EEB81FA068F20093C5CB /* powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerup.wav; sourceTree = "<group>"; };
+		EF26EEB91FA068F20093C5CB /* solid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = solid.wav; sourceTree = "<group>"; };
+		EF26EEBC1FA06B0E0093C5CB /* ik_ESoundEngineOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ESoundEngineOptions.h; sourceTree = "<group>"; };
+		EF26EEBD1FA06B0E0093C5CB /* ik_ESoundOutputDrivers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ESoundOutputDrivers.h; sourceTree = "<group>"; };
+		EF26EEBE1FA06B0E0093C5CB /* ik_EStreamModes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_EStreamModes.h; sourceTree = "<group>"; };
+		EF26EEBF1FA06B0E0093C5CB /* ik_IAudioRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioRecorder.h; sourceTree = "<group>"; };
+		EF26EEC01FA06B0E0093C5CB /* ik_IAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioStream.h; sourceTree = "<group>"; };
+		EF26EEC11FA06B0E0093C5CB /* ik_IAudioStreamLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioStreamLoader.h; sourceTree = "<group>"; };
+		EF26EEC21FA06B0E0093C5CB /* ik_IFileFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IFileFactory.h; sourceTree = "<group>"; };
+		EF26EEC31FA06B0E0093C5CB /* ik_IFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IFileReader.h; sourceTree = "<group>"; };
+		EF26EEC41FA06B0E0093C5CB /* ik_IRefCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IRefCounted.h; sourceTree = "<group>"; };
+		EF26EEC51FA06B0E0093C5CB /* ik_irrKlangTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_irrKlangTypes.h; sourceTree = "<group>"; };
+		EF26EEC61FA06B0E0093C5CB /* ik_ISound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISound.h; sourceTree = "<group>"; };
+		EF26EEC71FA06B0E0093C5CB /* ik_ISoundDeviceList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundDeviceList.h; sourceTree = "<group>"; };
+		EF26EEC81FA06B0E0093C5CB /* ik_ISoundEffectControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundEffectControl.h; sourceTree = "<group>"; };
+		EF26EEC91FA06B0E0093C5CB /* ik_ISoundEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundEngine.h; sourceTree = "<group>"; };
+		EF26EECA1FA06B0E0093C5CB /* ik_ISoundMixedOutputReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundMixedOutputReceiver.h; sourceTree = "<group>"; };
+		EF26EECB1FA06B0E0093C5CB /* ik_ISoundSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundSource.h; sourceTree = "<group>"; };
+		EF26EECC1FA06B0E0093C5CB /* ik_ISoundStopEventReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundStopEventReceiver.h; sourceTree = "<group>"; };
+		EF26EECD1FA06B0E0093C5CB /* ik_IVirtualRefCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IVirtualRefCounted.h; sourceTree = "<group>"; };
+		EF26EECE1FA06B0E0093C5CB /* ik_SAudioStreamFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_SAudioStreamFormat.h; sourceTree = "<group>"; };
+		EF26EECF1FA06B0E0093C5CB /* ik_vec3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_vec3d.h; sourceTree = "<group>"; };
+		EF26EED01FA06B0E0093C5CB /* irrKlang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = irrKlang.h; sourceTree = "<group>"; };
 		EF453AFC1F999A9800A3E98B /* game_level.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_level.cpp; sourceTree = "<group>"; };
 		EF453AFD1F999A9800A3E98B /* game_level.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_level.hpp; sourceTree = "<group>"; };
 		EF453AFF1F999B8600A3E98B /* game_object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game_object.cpp; sourceTree = "<group>"; };
 		EF453B001F999B8600A3E98B /* game_object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game_object.hpp; sourceTree = "<group>"; };
-		EF453B051F99A37300A3E98B /* block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block.png; sourceTree = "<group>"; };
-		EF453B061F99A37300A3E98B /* block_solid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = block_solid.png; sourceTree = "<group>"; };
-		EF453B071F99A37300A3E98B /* paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paddle.png; sourceTree = "<group>"; };
-		EF453B081F99A39700A3E98B /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
-		EF453B0A1F99A3DC00A3E98B /* one.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = one.lvl; sourceTree = "<group>"; };
-		EF453B0B1F99A3F600A3E98B /* two.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = two.lvl; sourceTree = "<group>"; };
-		EF453B0C1F99A40900A3E98B /* three.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = three.lvl; sourceTree = "<group>"; };
-		EF453B0D1F99A41300A3E98B /* four.lvl */ = {isa = PBXFileReference; lastKnownFileType = text; path = four.lvl; sourceTree = "<group>"; };
 		EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ball_object_collisions.cpp; sourceTree = "<group>"; };
 		EF453B101F99C69A00A3E98B /* ball_object_collisions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ball_object_collisions.hpp; sourceTree = "<group>"; };
 		EF49A3851F98B2F900D2C0DD /* sprite_renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sprite_renderer.cpp; sourceTree = "<group>"; };
 		EF49A3861F98B2F900D2C0DD /* sprite_renderer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = sprite_renderer.hpp; sourceTree = "<group>"; };
-		EF49A3891F98B2F900D2C0DD /* awesomeface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awesomeface.png; sourceTree = "<group>"; };
 		EF49A38B1F98B2F900D2C0DD /* sprite.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sprite.vert; sourceTree = "<group>"; };
 		EF49A38C1F98B2F900D2C0DD /* sprite.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = sprite.frag; sourceTree = "<group>"; };
 		EF6CD9511F988F3F00F17879 /* stb_image.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stb_image.h; sourceTree = "<group>"; };
@@ -343,12 +377,6 @@
 		EFC5DFD31F99D7A20048A7D8 /* particle_generator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = particle_generator.hpp; sourceTree = "<group>"; };
 		EFC5DFD61F99D9560048A7D8 /* particle.vert */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = particle.vert; sourceTree = "<group>"; };
 		EFC5DFD71F99D9660048A7D8 /* particle.frag */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; path = particle.frag; sourceTree = "<group>"; };
-		EFC5DFD81F99D9CE0048A7D8 /* particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = particle.png; sourceTree = "<group>"; };
-		EFD4DC581FA01BF900E41271 /* bleep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bleep.mp3; sourceTree = "<group>"; };
-		EFD4DC591FA01BF900E41271 /* bleep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bleep.wav; sourceTree = "<group>"; };
-		EFD4DC5A1FA01BF900E41271 /* breakout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breakout.mp3; sourceTree = "<group>"; };
-		EFD4DC5B1FA01BF900E41271 /* powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerup.wav; sourceTree = "<group>"; };
-		EFD4DC5C1FA01BF900E41271 /* solid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = solid.wav; sourceTree = "<group>"; };
 		EFD4DC5D1FA01C3C00E41271 /* power_up.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = power_up.hpp; sourceTree = "<group>"; };
 		EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = power_up.cpp; sourceTree = "<group>"; };
 		EFD4DC601FA01C7700E41271 /* post_processor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = post_processor.hpp; sourceTree = "<group>"; };
@@ -357,27 +385,6 @@
 		EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpMP3.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/ikpMP3.dylib"; sourceTree = "<group>"; };
 		EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/libirrklang.dylib"; sourceTree = "<group>"; };
 		EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpFLAC.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/ikpFLAC.dylib"; sourceTree = "<group>"; };
-		EFD4DCD11FA0361F00E41271 /* ik_ESoundEngineOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ESoundEngineOptions.h; sourceTree = "<group>"; };
-		EFD4DCD21FA0361F00E41271 /* ik_ESoundOutputDrivers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ESoundOutputDrivers.h; sourceTree = "<group>"; };
-		EFD4DCD31FA0361F00E41271 /* ik_EStreamModes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_EStreamModes.h; sourceTree = "<group>"; };
-		EFD4DCD41FA0361F00E41271 /* ik_IAudioRecorder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioRecorder.h; sourceTree = "<group>"; };
-		EFD4DCD51FA0361F00E41271 /* ik_IAudioStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioStream.h; sourceTree = "<group>"; };
-		EFD4DCD61FA0361F00E41271 /* ik_IAudioStreamLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IAudioStreamLoader.h; sourceTree = "<group>"; };
-		EFD4DCD71FA0361F00E41271 /* ik_IFileFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IFileFactory.h; sourceTree = "<group>"; };
-		EFD4DCD81FA0361F00E41271 /* ik_IFileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IFileReader.h; sourceTree = "<group>"; };
-		EFD4DCD91FA0361F00E41271 /* ik_IRefCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IRefCounted.h; sourceTree = "<group>"; };
-		EFD4DCDA1FA0361F00E41271 /* ik_irrKlangTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_irrKlangTypes.h; sourceTree = "<group>"; };
-		EFD4DCDB1FA0361F00E41271 /* ik_ISound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISound.h; sourceTree = "<group>"; };
-		EFD4DCDC1FA0361F00E41271 /* ik_ISoundDeviceList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundDeviceList.h; sourceTree = "<group>"; };
-		EFD4DCDD1FA0361F00E41271 /* ik_ISoundEffectControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundEffectControl.h; sourceTree = "<group>"; };
-		EFD4DCDE1FA0361F00E41271 /* ik_ISoundEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundEngine.h; sourceTree = "<group>"; };
-		EFD4DCDF1FA0361F00E41271 /* ik_ISoundMixedOutputReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundMixedOutputReceiver.h; sourceTree = "<group>"; };
-		EFD4DCE01FA0361F00E41271 /* ik_ISoundSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundSource.h; sourceTree = "<group>"; };
-		EFD4DCE11FA0361F00E41271 /* ik_ISoundStopEventReceiver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_ISoundStopEventReceiver.h; sourceTree = "<group>"; };
-		EFD4DCE21FA0361F00E41271 /* ik_IVirtualRefCounted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_IVirtualRefCounted.h; sourceTree = "<group>"; };
-		EFD4DCE31FA0361F00E41271 /* ik_SAudioStreamFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_SAudioStreamFormat.h; sourceTree = "<group>"; };
-		EFD4DCE41FA0361F00E41271 /* ik_vec3d.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ik_vec3d.h; sourceTree = "<group>"; };
-		EFD4DCE51FA0361F00E41271 /* irrKlang.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = irrKlang.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,9 +392,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFD4DCCD1FA033FA00E41271 /* ikpMP3.dylib in Frameworks */,
-				EFD4DCCE1FA033FA00E41271 /* libirrklang.dylib in Frameworks */,
+				EF26EEAC1FA066E70093C5CB /* ikpMP3.dylib in Frameworks */,
 				EFD4DCCF1FA033FA00E41271 /* ikpFLAC.dylib in Frameworks */,
+				EFD4DCCE1FA033FA00E41271 /* libirrklang.dylib in Frameworks */,
 				EFA63A011F98ABFE0011028F /* libassimp.4.0.1.dylib in Frameworks */,
 				EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */,
 				EFA639FF1F98ABF70011028F /* libGLEW.2.1.0.dylib in Frameworks */,
@@ -419,8 +426,8 @@
 		EF11B9771F98A0EE00A7ED09 /* Breakout */ = {
 			isa = PBXGroup;
 			children = (
+				EF26EE731FA063670093C5CB /* Resources */,
 				EF49A38A1F98B2F900D2C0DD /* Shaders */,
-				EF49A3881F98B2F900D2C0DD /* Sources */,
 				EFA63B0B1F98AE050011028F /* Manager */,
 				EF453B0E1F99C64F00A3E98B /* Entity */,
 				EFA639F41F98AB090011028F /* Utility */,
@@ -429,15 +436,85 @@
 			path = Breakout;
 			sourceTree = "<group>";
 		};
-		EF453B091F99A3D000A3E98B /* Levels */ = {
+		EF26EE731FA063670093C5CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				EF453B0A1F99A3DC00A3E98B /* one.lvl */,
-				EF453B0B1F99A3F600A3E98B /* two.lvl */,
-				EF453B0C1F99A40900A3E98B /* three.lvl */,
-				EF453B0D1F99A41300A3E98B /* four.lvl */,
+				EF26EEBB1FA06B0E0093C5CB /* include */,
+				EF26EEB41FA068F20093C5CB /* Audio */,
+				EF26EE921FA063670093C5CB /* Levels */,
+				EF26EE971FA063670093C5CB /* Textures */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EF26EE921FA063670093C5CB /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				EF26EE931FA063670093C5CB /* four.lvl */,
+				EF26EE941FA063670093C5CB /* one.lvl */,
+				EF26EE951FA063670093C5CB /* three.lvl */,
+				EF26EE961FA063670093C5CB /* two.lvl */,
 			);
 			path = Levels;
+			sourceTree = "<group>";
+		};
+		EF26EE971FA063670093C5CB /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				EF26EE981FA063670093C5CB /* awesomeface.png */,
+				EF26EE991FA063670093C5CB /* background.jpg */,
+				EF26EE9A1FA063670093C5CB /* block.png */,
+				EF26EE9B1FA063670093C5CB /* block_solid.png */,
+				EF26EE9C1FA063670093C5CB /* paddle.png */,
+				EF26EE9D1FA063670093C5CB /* particle.png */,
+				EF26EE9E1FA063670093C5CB /* powerup_chaos.png */,
+				EF26EE9F1FA063670093C5CB /* powerup_confuse.png */,
+				EF26EEA01FA063670093C5CB /* powerup_increase.png */,
+				EF26EEA11FA063670093C5CB /* powerup_passthrough.png */,
+				EF26EEA21FA063670093C5CB /* powerup_speed.png */,
+				EF26EEA31FA063670093C5CB /* powerup_sticky.png */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		EF26EEB41FA068F20093C5CB /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				EF26EEB51FA068F20093C5CB /* bleep.wav */,
+				EF26EEB61FA068F20093C5CB /* bleep2.wav */,
+				EF26EEB71FA068F20093C5CB /* breakout.wav */,
+				EF26EEB81FA068F20093C5CB /* powerup.wav */,
+				EF26EEB91FA068F20093C5CB /* solid.wav */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		EF26EEBB1FA06B0E0093C5CB /* include */ = {
+			isa = PBXGroup;
+			children = (
+				EF26EEBC1FA06B0E0093C5CB /* ik_ESoundEngineOptions.h */,
+				EF26EEBD1FA06B0E0093C5CB /* ik_ESoundOutputDrivers.h */,
+				EF26EEBE1FA06B0E0093C5CB /* ik_EStreamModes.h */,
+				EF26EEBF1FA06B0E0093C5CB /* ik_IAudioRecorder.h */,
+				EF26EEC01FA06B0E0093C5CB /* ik_IAudioStream.h */,
+				EF26EEC11FA06B0E0093C5CB /* ik_IAudioStreamLoader.h */,
+				EF26EEC21FA06B0E0093C5CB /* ik_IFileFactory.h */,
+				EF26EEC31FA06B0E0093C5CB /* ik_IFileReader.h */,
+				EF26EEC41FA06B0E0093C5CB /* ik_IRefCounted.h */,
+				EF26EEC51FA06B0E0093C5CB /* ik_irrKlangTypes.h */,
+				EF26EEC61FA06B0E0093C5CB /* ik_ISound.h */,
+				EF26EEC71FA06B0E0093C5CB /* ik_ISoundDeviceList.h */,
+				EF26EEC81FA06B0E0093C5CB /* ik_ISoundEffectControl.h */,
+				EF26EEC91FA06B0E0093C5CB /* ik_ISoundEngine.h */,
+				EF26EECA1FA06B0E0093C5CB /* ik_ISoundMixedOutputReceiver.h */,
+				EF26EECB1FA06B0E0093C5CB /* ik_ISoundSource.h */,
+				EF26EECC1FA06B0E0093C5CB /* ik_ISoundStopEventReceiver.h */,
+				EF26EECD1FA06B0E0093C5CB /* ik_IVirtualRefCounted.h */,
+				EF26EECE1FA06B0E0093C5CB /* ik_SAudioStreamFormat.h */,
+				EF26EECF1FA06B0E0093C5CB /* ik_vec3d.h */,
+				EF26EED01FA06B0E0093C5CB /* irrKlang.h */,
+			);
+			path = include;
 			sourceTree = "<group>";
 		};
 		EF453B0E1F99C64F00A3E98B /* Entity */ = {
@@ -451,16 +528,6 @@
 				EF453B101F99C69A00A3E98B /* ball_object_collisions.hpp */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		EF49A3881F98B2F900D2C0DD /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				EFD4DC571FA01BF900E41271 /* Audio */,
-				EF453B091F99A3D000A3E98B /* Levels */,
-				EFBC086E1F988572007ABA6A /* Textures */,
-			);
-			path = Sources;
 			sourceTree = "<group>";
 		};
 		EF49A38A1F98B2F900D2C0DD /* Shaders */ = {
@@ -497,6 +564,7 @@
 		EFA639F91F98ABD30011028F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF26EEAA1FA066CA0093C5CB /* libikpMP3.dylib */,
 				EFD4DCC61FA032FB00E41271 /* libirrklang.dylib */,
 				EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */,
 				EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */,
@@ -796,7 +864,6 @@
 		EFA63B0B1F98AE050011028F /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				EFD4DCD01FA0361F00E41271 /* include */,
 				EFA639F51F98AB270011028F /* game_setting-up.cpp */,
 				EFA639F61F98AB270011028F /* game_setting-up.hpp */,
 				EFA63B181F98B07C0011028F /* resource_manager.cpp */,
@@ -812,59 +879,6 @@
 				EFD4DC601FA01C7700E41271 /* post_processor.hpp */,
 			);
 			path = Manager;
-			sourceTree = "<group>";
-		};
-		EFBC086E1F988572007ABA6A /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				EFC5DFD81F99D9CE0048A7D8 /* particle.png */,
-				EF453B081F99A39700A3E98B /* background.jpg */,
-				EF49A3891F98B2F900D2C0DD /* awesomeface.png */,
-				EF453B061F99A37300A3E98B /* block_solid.png */,
-				EF453B051F99A37300A3E98B /* block.png */,
-				EF453B071F99A37300A3E98B /* paddle.png */,
-			);
-			path = Textures;
-			sourceTree = "<group>";
-		};
-		EFD4DC571FA01BF900E41271 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				EFD4DC581FA01BF900E41271 /* bleep.mp3 */,
-				EFD4DC591FA01BF900E41271 /* bleep.wav */,
-				EFD4DC5A1FA01BF900E41271 /* breakout.mp3 */,
-				EFD4DC5B1FA01BF900E41271 /* powerup.wav */,
-				EFD4DC5C1FA01BF900E41271 /* solid.wav */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
-		EFD4DCD01FA0361F00E41271 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				EFD4DCD11FA0361F00E41271 /* ik_ESoundEngineOptions.h */,
-				EFD4DCD21FA0361F00E41271 /* ik_ESoundOutputDrivers.h */,
-				EFD4DCD31FA0361F00E41271 /* ik_EStreamModes.h */,
-				EFD4DCD41FA0361F00E41271 /* ik_IAudioRecorder.h */,
-				EFD4DCD51FA0361F00E41271 /* ik_IAudioStream.h */,
-				EFD4DCD61FA0361F00E41271 /* ik_IAudioStreamLoader.h */,
-				EFD4DCD71FA0361F00E41271 /* ik_IFileFactory.h */,
-				EFD4DCD81FA0361F00E41271 /* ik_IFileReader.h */,
-				EFD4DCD91FA0361F00E41271 /* ik_IRefCounted.h */,
-				EFD4DCDA1FA0361F00E41271 /* ik_irrKlangTypes.h */,
-				EFD4DCDB1FA0361F00E41271 /* ik_ISound.h */,
-				EFD4DCDC1FA0361F00E41271 /* ik_ISoundDeviceList.h */,
-				EFD4DCDD1FA0361F00E41271 /* ik_ISoundEffectControl.h */,
-				EFD4DCDE1FA0361F00E41271 /* ik_ISoundEngine.h */,
-				EFD4DCDF1FA0361F00E41271 /* ik_ISoundMixedOutputReceiver.h */,
-				EFD4DCE01FA0361F00E41271 /* ik_ISoundSource.h */,
-				EFD4DCE11FA0361F00E41271 /* ik_ISoundStopEventReceiver.h */,
-				EFD4DCE21FA0361F00E41271 /* ik_IVirtualRefCounted.h */,
-				EFD4DCE31FA0361F00E41271 /* ik_SAudioStreamFormat.h */,
-				EFD4DCE41FA0361F00E41271 /* ik_vec3d.h */,
-				EFD4DCE51FA0361F00E41271 /* irrKlang.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1036,6 +1050,7 @@
 		EF11B97D1F98A0EE00A7ED09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
@@ -1050,7 +1065,6 @@
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
 					/usr/local/Cellar/assimp/4.0.1/lib,
-					"$(PROJECT_DIR)/Breakout/Manager",
 					/usr/local/Cellar/irrKlang/lib,
 					"/usr/local/Cellar/irrKlang/bin/macosx-gcc",
 				);
@@ -1063,6 +1077,7 @@
 		EF11B97E1F98A0EE00A7ED09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
 				HEADER_SEARCH_PATHS = (
 					"$(glew_header)",
@@ -1077,7 +1092,6 @@
 					"$(assimp_lib)",
 					"$(libfreetype_lib)",
 					/usr/local/Cellar/assimp/4.0.1/lib,
-					"$(PROJECT_DIR)/Breakout/Manager",
 					/usr/local/Cellar/irrKlang/lib,
 					"/usr/local/Cellar/irrKlang/bin/macosx-gcc",
 				);
