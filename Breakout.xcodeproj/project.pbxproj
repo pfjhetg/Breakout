@@ -24,6 +24,8 @@
 		EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFA63B181F98B07C0011028F /* resource_manager.cpp */; };
 		EFB94B6A1F9BAEA40092B8DE /* libfreetype.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB94B691F9BAEA40092B8DE /* libfreetype.6.dylib */; };
 		EFC5DFD41F99D7A20048A7D8 /* particle_generator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFC5DFD21F99D7A20048A7D8 /* particle_generator.cpp */; };
+		EFD4DC5F1FA01C3C00E41271 /* power_up.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */; };
+		EFD4DC621FA01C7700E41271 /* post_processor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD4DC611FA01C7700E41271 /* post_processor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -344,6 +346,10 @@
 		EFD4DC5A1FA01BF900E41271 /* breakout.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breakout.mp3; sourceTree = "<group>"; };
 		EFD4DC5B1FA01BF900E41271 /* powerup.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = powerup.wav; sourceTree = "<group>"; };
 		EFD4DC5C1FA01BF900E41271 /* solid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = solid.wav; sourceTree = "<group>"; };
+		EFD4DC5D1FA01C3C00E41271 /* power_up.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = power_up.hpp; sourceTree = "<group>"; };
+		EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = power_up.cpp; sourceTree = "<group>"; };
+		EFD4DC601FA01C7700E41271 /* post_processor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = post_processor.hpp; sourceTree = "<group>"; };
+		EFD4DC611FA01C7700E41271 /* post_processor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = post_processor.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -406,6 +412,8 @@
 		EF453B0E1F99C64F00A3E98B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */,
+				EFD4DC5D1FA01C3C00E41271 /* power_up.hpp */,
 				EF453AFF1F999B8600A3E98B /* game_object.cpp */,
 				EF453B001F999B8600A3E98B /* game_object.hpp */,
 				EF453B0F1F99C69A00A3E98B /* ball_object_collisions.cpp */,
@@ -753,6 +761,8 @@
 		EFA63B0B1F98AE050011028F /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				EFD4DC611FA01C7700E41271 /* post_processor.cpp */,
+				EFD4DC601FA01C7700E41271 /* post_processor.hpp */,
 				EFA639F51F98AB270011028F /* game_setting-up.cpp */,
 				EFA639F61F98AB270011028F /* game_setting-up.hpp */,
 				EFA63B181F98B07C0011028F /* resource_manager.cpp */,
@@ -858,7 +868,9 @@
 				EFA63B141F98AEAB0011028F /* shader.cpp in Sources */,
 				EF453AFE1F999A9800A3E98B /* game_level.cpp in Sources */,
 				EF453B111F99C69A00A3E98B /* ball_object_collisions.cpp in Sources */,
+				EFD4DC5F1FA01C3C00E41271 /* power_up.cpp in Sources */,
 				EFA63A041F98ACF00011028F /* glad.c in Sources */,
+				EFD4DC621FA01C7700E41271 /* post_processor.cpp in Sources */,
 				EFA63B171F98AFE40011028F /* texture.cpp in Sources */,
 				EFA63B1A1F98B07C0011028F /* resource_manager.cpp in Sources */,
 				EF49A3871F98B2F900D2C0DD /* sprite_renderer.cpp in Sources */,
