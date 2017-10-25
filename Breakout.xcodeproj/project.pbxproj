@@ -389,7 +389,6 @@
 		EFD4DC5E1FA01C3C00E41271 /* power_up.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = power_up.cpp; sourceTree = "<group>"; };
 		EFD4DC601FA01C7700E41271 /* post_processor.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = post_processor.hpp; sourceTree = "<group>"; };
 		EFD4DC611FA01C7700E41271 /* post_processor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = post_processor.cpp; sourceTree = "<group>"; };
-		EFD4DCC61FA032FB00E41271 /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = ../../../../usr/local/Cellar/irrKlang/lib/libirrklang.dylib; sourceTree = "<group>"; };
 		EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpMP3.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/ikpMP3.dylib"; sourceTree = "<group>"; };
 		EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libirrklang.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/libirrklang.dylib"; sourceTree = "<group>"; };
 		EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = ikpFLAC.dylib; path = "../../../../usr/local/Cellar/irrKlang/bin/macosx-gcc/ikpFLAC.dylib"; sourceTree = "<group>"; };
@@ -586,7 +585,6 @@
 			isa = PBXGroup;
 			children = (
 				EF26EEAA1FA066CA0093C5CB /* libikpMP3.dylib */,
-				EFD4DCC61FA032FB00E41271 /* libirrklang.dylib */,
 				EFD4DCCC1FA033FA00E41271 /* ikpFLAC.dylib */,
 				EFD4DCCA1FA033FA00E41271 /* ikpMP3.dylib */,
 				EFD4DCCB1FA033FA00E41271 /* libirrklang.dylib */,
