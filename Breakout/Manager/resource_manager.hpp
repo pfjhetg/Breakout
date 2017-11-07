@@ -11,9 +11,6 @@
 
 #include "learnopengl.h"
 
-#include <map>
-#include <string>
-
 #include "texture.hpp"
 #include "shader.hpp"
 

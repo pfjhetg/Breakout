@@ -12,6 +12,12 @@
 #include "glad.h"
 #include <GLFW/glfw3.h>
 
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <map>
+#include <string>
+
 #include "camera.h"
 // 文本
 #include <freetype2/ft2build.h>

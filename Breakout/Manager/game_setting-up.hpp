@@ -20,13 +20,9 @@
 #include <tuple>
 #include "text_renderer.hpp"
 
-#include <iostream>
-#include <sstream>
-
 #include "irrKlang.h"
 using namespace irrklang;
 #pragma comment(lib, "irrKlang.lib")
-#include <vector>
 
 // 代表了游戏的当前状态
 enum GameState {

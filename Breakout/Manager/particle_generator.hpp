@@ -8,7 +8,6 @@
  ******************************************************************/
 #ifndef PARTICLE_GENERATOR_H
 #define PARTICLE_GENERATOR_H
-#include <vector>
 
 #include "learnopengl.h"
 

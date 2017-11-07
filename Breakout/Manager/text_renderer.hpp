@@ -9,8 +9,6 @@
 #ifndef TEXT_RENDERER_H
 #define TEXT_RENDERER_H
 
-#include <map>
-
 #include "learnopengl.h"
 
 #include "texture.hpp"

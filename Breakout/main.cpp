@@ -8,10 +8,8 @@
  ******************************************************************/
 #include "learnopengl.h"
 
-#include <iostream>
 
 #include "game_setting-up.hpp"
-#include "resource_manager.hpp"
 
 // GLFW function declerations
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode);
@@ -68,6 +66,7 @@ int main(int argc, char *argv[])
     // Start Game within Menu State
     Breakout.State = GAME_ACTIVE;
 
+    // 主循环
     while (!glfwWindowShouldClose(window))
     {
         // Calculate delta time
@@ -80,10 +79,10 @@ int main(int argc, char *argv[])
         // Manage user input
         Breakout.ProcessInput(deltaTime);
         
-        // Update Game state
+        // 更新游戏状态
         Breakout.Update(deltaTime);
         
-        // Render
+        // 渲染更新
         glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
         Breakout.Render();
